@@ -20,6 +20,18 @@ namespace MusicOrganiser.Web
                       "~/Scripts/bootstrap.js",
                       "~/Scripts/respond.js"));
 
+
+            bundles.Add(new ScriptBundle("~/bundles/angular")
+                .Include(
+                    "~/Scripts/angular.js",
+                    "~/Scripts/angular-resource.js"
+                ).Include(
+                    "~/Scripts/app.module.js"
+                ).IncludeDirectory(
+                    "~/Scripts/Songs/", "*.js"
+                )
+            );
+
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
                       "~/Content/site.css"));

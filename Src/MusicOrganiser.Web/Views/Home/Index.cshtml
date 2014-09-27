@@ -1,24 +1,64 @@
 ﻿<div class="jumbotron">
-    <h1>ASP.NET</h1>
-    <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS, and JavaScript.</p>
-    <p><a href="http://asp.net" class="btn btn-primary btn-large">Learn more &raquo;</a></p>
+    <h1>Music Organiser</h1>
+    <div class="visible-lg">lg</div>
+    <div class="visible-md">md</div>
+    <div class="visible-sm">sm</div>
+    <div class="visible-xs">xs</div>
 </div>
-<div class="row">
-    <div class="col-md-4">
-        <h2>Getting started</h2>
-        <p>ASP.NET Web API is a framework that makes it easy to build HTTP services that reach
-        a broad range of clients, including browsers and mobile devices. ASP.NET Web API
-        is an ideal platform for building RESTful applications on the .NET Framework.</p>
-        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301870">Learn more &raquo;</a></p>
+
+<div ng-controller="songs">
+
+    <div class="row">
+        <div class="col-md-6">
+
+            <!-- this is my songs column-->
+
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Song list</h3>
+                </div>
+                <div class="panel-body" ng-repeat="song in allSongs">
+                    {{ song.title }}
+                </div>
+            </div>
+
+        </div>
+        <div class="col-md-6">
+            <p>Some other column to be decided later</p>
+        </div>
     </div>
-    <div class="col-md-4">
-        <h2>Get more libraries</h2>
-        <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
-        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301871">Learn more &raquo;</a></p>
+
+    <div class="row">
+        <h4 class="col-sm-1">Song Id</h4>
+        <h4 class="col-sm-3">Title</h4>
+        <h4 class="col-sm-3">Artist</h4>
+        <h4 class="col-sm-5">Album</h4>
     </div>
-    <div class="col-md-4">
-        <h2>Web Hosting</h2>
-        <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
-        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301872">Learn more &raquo;</a></p>
+    <div class="row" ng-repeat="song in allSongs">
+        <div class="col-sm-1">{{ song.id }}</div>
+        <div class="col-sm-3">{{ song.title }}</div>
+        <div class="col-sm-3">{{ song.artist }}</div>
+        <div class="col-sm-5">{{ song.album }}</div>
     </div>
+
+    <br />
+
+    <div class="row">
+        <table class="table table-condensed table-hover">
+            <tr>
+                <th>Song Id</th>
+                <th>Title</th>
+                <th>Artist</th>
+                <th>Album</th>
+            </tr>
+            <tr ng-repeat="song in allSongs">
+                <td>{{song.id}}</td>
+                <td>{{song.title}}</td>
+                <td>{{song.artist}}</td>
+                <td>{{song.album}}</td>
+            </tr>
+        </table>
+    </div>
+
 </div>
+
