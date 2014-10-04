@@ -1,12 +1,7 @@
-// --------------------------------------------------------------------------------------------------------------------
-// <copyright file="BundleConfig.cs" company="">
-//   Copyright © 2014 
-// </copyright>
-// --------------------------------------------------------------------------------------------------------------------
+using System.Web.Optimization;
 
 namespace App.MusicOrganiser.Spa
 {
-    using System.Web.Optimization;
 
     public class BundleConfig
     {
@@ -16,7 +11,8 @@ namespace App.MusicOrganiser.Spa
             bundles.Add(new StyleBundle("~/content/css/app").Include("~/content/app.css"));
 
             bundles.Add(
-                new ScriptBundle("~/js/app").Include(
+                new ScriptBundle("~/js/app") { Orderer = new AngularModuleBundleOrderer() }
+                .Include(
                     "~/scripts/vendor/jquery-{version}.js",
                     "~/scripts/vendor/angular.js",
                     "~/scripts/vendor/bootstrap.js",
@@ -29,21 +25,9 @@ namespace App.MusicOrganiser.Spa
                  ).IncludeDirectory(
                     "~/scripts/app/songs/", "*.js"
                  ).Include(
-                    "~/scripts/app.js"
+                    "~/Scripts/app.js"
                  )
              );
         }
     }
-
-
-    //TODO: Need to figure out some way of specifying that modules should come first.
-    //public static class BundleExtensions
-    //{
-    //    public static Bundle IncludeAngularModule(this Bundle bundle, string directory)
-    //    {
-    //        return bundle
-    //            .IncludeDirectory(directory, @"*\.module\.js")
-    //            .IncludeDirectory(directory, @"*\.(?<!module)\.js");
-    //    }
-    //}
 }

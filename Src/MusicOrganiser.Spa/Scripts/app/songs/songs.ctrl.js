@@ -1,7 +1,6 @@
 ﻿'use strict';
 
 angular.module('app.songs')
-//window.mike.appSongs
 
     // Path: /songs
     .controller('SongsCtrl', ['$scope', '$location', '$window', 'songsResource', function ($scope, $location, $window, songsResource) {
