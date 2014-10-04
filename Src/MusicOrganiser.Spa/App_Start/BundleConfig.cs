@@ -6,7 +6,6 @@
 
 namespace App.MusicOrganiser.Spa
 {
-    using System.Web;
     using System.Web.Optimization;
 
     public class BundleConfig
@@ -16,15 +15,23 @@ namespace App.MusicOrganiser.Spa
         {
             bundles.Add(new StyleBundle("~/content/css/app").Include("~/content/app.css"));
 
-            bundles.Add(new ScriptBundle("~/js/jquery").Include("~/scripts/vendor/jquery-{version}.js"));
-
-            bundles.Add(new ScriptBundle("~/js/app").Include(
-                "~/scripts/vendor/angular-ui-router.js",
-                "~/scripts/filters.js",
-                "~/scripts/services.js",
-                "~/scripts/directives.js",
-                "~/scripts/controllers.js",
-                "~/scripts/app.js"));
+            bundles.Add(
+                new ScriptBundle("~/js/app").Include(
+                    "~/scripts/vendor/jquery-{version}.js",
+                    "~/scripts/vendor/angular.js",
+                    "~/scripts/vendor/bootstrap.js",
+                    "~/scripts/vendor/angular-resource.js",
+                    "~/scripts/vendor/angular-ui-router.js",
+                    "~/scripts/filters.js",
+                    "~/scripts/services.js",
+                    "~/scripts/directives.js",
+                    "~/scripts/controllers.js"
+                 ).IncludeDirectory(
+                    "~/scripts/app/songs/", "*.js"
+                 ).Include(
+                    "~/scripts/app.js"
+                 )
+             );
         }
     }
 }

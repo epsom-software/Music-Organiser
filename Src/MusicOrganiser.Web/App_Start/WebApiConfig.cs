@@ -1,4 +1,5 @@
 ﻿using System.Web.Http;
+using System.Web.Http.Cors;
 using Newtonsoft.Json.Serialization;
 
 namespace MusicOrganiser.Web
@@ -19,6 +20,8 @@ namespace MusicOrganiser.Web
             );
 
             config.Formatters.JsonFormatter.SerializerSettings.ContractResolver = new CamelCasePropertyNamesContractResolver();
+
+            config.EnableCors(new EnableCorsAttribute("*", "*", "*"));
         }
     }
 }

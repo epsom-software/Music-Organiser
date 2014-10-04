@@ -1,0 +1,32 @@
+﻿@{
+    PageData["title"] = "AngularJS SPA | About";
+}
+<h2>Songs</h2>
+<p>Songs Songs Songs.</p>
+
+<div class="row">
+    <div class="col-md-6">
+        <table class="table table-hover  table-striped table-condensed">
+            <thead class="bg-primary">
+                <tr>
+                    <th>id</th>
+                    <th>Title</th>
+                    <th>Album</th>
+                    <th>Artist</th>
+                </tr>
+            </thead>
+            <tbody ng-repeat="song in allSongs">
+                <tr>
+                    <td>{{song.id}}</td>
+                    <td>{{song.title}}</td>
+                    <td>{{song.album}}</td>
+                    <td>{{song.artist}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+
+{{4+4}}
+{{allSongs}}
