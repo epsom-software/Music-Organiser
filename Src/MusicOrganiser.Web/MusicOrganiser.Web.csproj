@@ -116,7 +116,9 @@
     <Folder Include="App_Data\" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="App_Start\BundleConfig - Copy.cs" />
     <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\CdnBundle.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
@@ -150,14 +152,20 @@
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
-    <Content Include="Scripts\angular-mocks.js" />
-    <Content Include="Scripts\angular-resource.js" />
-    <Content Include="Scripts\angular-resource.min.js" />
-    <Content Include="Scripts\angular.js" />
-    <Content Include="Scripts\angular.min.js" />
-    <Content Include="Scripts\app.module.js" />
-    <Content Include="Scripts\bootstrap.js" />
-    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="AngularViews\songs.html" />
+    <Content Include="AngularViews\index.html" />
+    <Content Include="Scripts\AlertOnError.js" />
+    <Content Include="Scripts\RequireConfig.js" />
+    <Content Include="Scripts\Vendor\angular-mocks.js" />
+    <Content Include="Scripts\Vendor\angular-resource.js" />
+    <Content Include="Scripts\Vendor\angular-resource.min.js" />
+    <Content Include="Scripts\Vendor\angular-route.js" />
+    <Content Include="Scripts\Vendor\angular-route.min.js" />
+    <Content Include="Scripts\Vendor\angular.js" />
+    <Content Include="Scripts\Vendor\angular.min.js" />
+    <Content Include="Scripts\Songs\app.module.js" />
+    <Content Include="Scripts\Vendor\bootstrap.js" />
+    <Content Include="Scripts\Vendor\bootstrap.min.js" />
     <Content Include="Areas\HelpPage\Views\Web.config" />
     <Content Include="Areas\HelpPage\Views\Shared\_Layout.cshtml" />
     <Content Include="Areas\HelpPage\Views\Help\Index.cshtml" />
@@ -169,14 +177,18 @@
     <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\HelpPageApiModel.cshtml" />
     <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\ApiGroup.cshtml" />
     <Content Include="Areas\HelpPage\Views\Help\Api.cshtml" />
-    <Content Include="Scripts\angular.min.js.map" />
-    <Content Include="Scripts\angular-resource.min.js.map" />
-    <None Include="Scripts\jquery-1.10.2.intellisense.js" />
-    <Content Include="Scripts\jquery-1.10.2.js" />
-    <Content Include="Scripts\jquery-1.10.2.min.js" />
-    <Content Include="Scripts\modernizr-2.6.2.js" />
-    <Content Include="Scripts\respond.js" />
-    <Content Include="Scripts\respond.min.js" />
+    <Content Include="Scripts\Vendor\angular.min.js.map" />
+    <Content Include="Scripts\Vendor\angular-resource.min.js.map" />
+    <Content Include="Scripts\Vendor\angular-route.min.js.map" />
+    <None Include="Scripts\Vendor\jquery-1.10.2.intellisense.js" />
+    <Content Include="Scripts\Vendor\jquery-1.10.2.js" />
+    <Content Include="Scripts\Vendor\jquery-1.10.2.min.js" />
+    <Content Include="Scripts\Vendor\modernizr-2.6.2.js" />
+    <Content Include="Scripts\Vendor\r.js" />
+    <Content Include="Scripts\Vendor\require.js" />
+    <Content Include="Scripts\Vendor\respond.js" />
+    <Content Include="Scripts\Vendor\respond.min.js" />
+    <Content Include="Scripts\Songs\main.controller.js" />
     <Content Include="Scripts\Songs\songs.controller.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
@@ -193,7 +205,8 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Scripts\jquery-1.10.2.min.map" />
+    <Content Include="Scripts\Vendor\jquery-1.10.2.min.map" />
+    <Content Include="Views\Home\Index - Copy.cshtml" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

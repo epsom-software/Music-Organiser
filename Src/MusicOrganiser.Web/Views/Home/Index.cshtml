@@ -6,59 +6,16 @@
     <div class="visible-xs">xs</div>
 </div>
 
-<div ng-controller="songs">
-
-    <div class="row">
-        <div class="col-md-6">
-
-            <!-- this is my songs column-->
-
-            <div class="panel panel-default">
-                <div class="panel-heading">
-                    <h3 class="panel-title">Song list</h3>
-                </div>
-                <div class="panel-body" ng-repeat="song in allSongs">
-                    {{ song.title }}
-                </div>
-            </div>
-
-        </div>
-        <div class="col-md-6">
-            <p>Some other column to be decided later</p>
-        </div>
-    </div>
-
-    <div class="row">
-        <h4 class="col-sm-1">Song Id</h4>
-        <h4 class="col-sm-3">Title</h4>
-        <h4 class="col-sm-3">Artist</h4>
-        <h4 class="col-sm-5">Album</h4>
-    </div>
-    <div class="row" ng-repeat="song in allSongs">
-        <div class="col-sm-1">{{ song.id }}</div>
-        <div class="col-sm-3">{{ song.title }}</div>
-        <div class="col-sm-3">{{ song.artist }}</div>
-        <div class="col-sm-5">{{ song.album }}</div>
-    </div>
-
-    <br />
-
-    <div class="row">
-        <table class="table table-condensed table-hover">
-            <tr>
-                <th>Song Id</th>
-                <th>Title</th>
-                <th>Artist</th>
-                <th>Album</th>
-            </tr>
-            <tr ng-repeat="song in allSongs">
-                <td>{{song.id}}</td>
-                <td>{{song.title}}</td>
-                <td>{{song.artist}}</td>
-                <td>{{song.album}}</td>
-            </tr>
-        </table>
-    </div>
-
+<div ng-controller="main">
+    <a href="songs" class="pill">Link to Songs</a>
+    <hr/>
+    @*<div ng-view></div>*@
+    <hr />
+    <pre>{{1+1}}</pre>
+    @*<pre>$location.path() = {{$location.path()}}</pre>
+    <pre>$route.current.templateUrl = {{$route.current.templateUrl}}</pre>
+    <pre>$route.current.params = {{$route.current.params}}</pre>
+    <pre>$route.current.scope.name = {{$route.current.scope.name}}</pre>
+    <pre>$routeParams = {{$routeParams}}</pre>*@
 </div>
 

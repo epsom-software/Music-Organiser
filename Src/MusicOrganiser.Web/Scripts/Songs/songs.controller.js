@@ -1,5 +1,10 @@
 ﻿'use strict';
 
+
+require(["angular", function (angular) {
+    debugger
+
+
 angular.module('app', ['ngResource'])
 
     .controller('songs', ['$scope', '$resource', function ($scope, $resource) {
@@ -7,9 +12,15 @@ angular.module('app', ['ngResource'])
 
         var songsResource = $resource('/api/songs/:id', { id: '@id' });
 
-        $scope.allSongs = songsResource.query(function (allSongs) {
-            //$scope.allSongs = allSongs;
+        songsResource.query(function (allSongs) {
+            $scope.allSongs = allSongs;
         });
+
+
+
+
+
+
 
 
         //var realSongs = songsResource.get({ id: 2 }, function () {
@@ -34,3 +45,8 @@ angular.module('app', ['ngResource'])
 
 
     }])
+
+
+
+
+}]);
