@@ -1,7 +1,7 @@
 ﻿'use strict';
 
-//angular.module('app.songs')
-window.mike.appSongs
+angular.module('app.songs')
+//window.mike.appSongs
 
     .factory('songsResource', ['$resource', function ($resource) {
 

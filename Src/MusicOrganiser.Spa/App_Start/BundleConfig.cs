@@ -34,4 +34,16 @@ namespace App.MusicOrganiser.Spa
              );
         }
     }
+
+
+    //TODO: Need to figure out some way of specifying that modules should come first.
+    //public static class BundleExtensions
+    //{
+    //    public static Bundle IncludeAngularModule(this Bundle bundle, string directory)
+    //    {
+    //        return bundle
+    //            .IncludeDirectory(directory, @"*\.module\.js")
+    //            .IncludeDirectory(directory, @"*\.(?<!module)\.js");
+    //    }
+    //}
 }
