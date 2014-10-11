@@ -1,0 +1,119 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" ng-app>
+<head>
+    <title></title>
+    <!--<meta http-equiv="refresh" content="40">-->
+    <link href="Content/bootstrap.css" rel="stylesheet" />
+    <style>
+    </style>
+</head>
+<body>
+
+    <div class="container" style="padding-top:50px">
+        <div class="btn-toolbar">
+            <div class="btn-group">
+                <button type="button" class="btn btn-default" ng-repeat="o in [1,2,3,4]">
+                    <span class="glyphicon glyphicon-align-left"></span>
+                </button>
+            </div>
+        </div>
+        <br/>
+
+        <div class="horizontal" ng-controller="horizontalController">
+            <div class="fix">
+                <div class="btn-toolbar">
+                    <div class="btn-group target">
+                        <button ng-repeat="o in options"
+                                ng-click="click($index)"
+                                ng-if="selected === $index || expanded"
+                                type="button"
+                                class="btn btn-default">
+                            <span class="glyphicon glyphicon-{{o}}"></span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br />
+
+        <div class="vertical" ng-controller="verticalController">
+            <div class="fix">
+                <div class="btn-toolbar">
+                    <div class="btn-group-vertical target">
+                        <button ng-repeat="o in options"
+                                ng-click="click($index)"
+                                ng-if="selected === $index || expanded"
+                                type="button"
+                                class="btn btn-default">
+                            <span class="glyphicon glyphicon-{{o}}"></span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="vendor">
+        <script src="Scripts/Vendor/jquery-1.10.2.js"></script>
+        <script src="Scripts/Vendor/angular.js"></script>
+        <script src="Scripts/Vendor/angular-animate.js"></script>
+        <script src="Scripts/Vendor/bootstrap.js"></script>
+    </div>
+
+    <script>
+        function horizontalController($scope) {
+
+            var $root = $(".horizontal");
+            $scope.expanded = true;
+            $scope.selected = 2;
+            $scope.options = ["align-left", "align-center", "align-right", "align-justify"];
+
+            var width = 0;
+
+            $scope.click = function (index) {
+
+                if (!width) {
+                    width = $root.find(".target").width();
+                }
+
+                $scope.selected = index;
+                $scope.expanded = !$scope.expanded;
+
+                var marginLeft = 0;
+                if ($scope.expanded){
+                    marginLeft = (-width * index) / $scope.options.length;
+                }
+                $root.find(".fix").css("margin-left", marginLeft)
+            }
+        }
+
+        function verticalController($scope) {
+
+            var $root = $(".vertical");
+            $scope.expanded = true;
+            $scope.selected = 2;
+            $scope.options = ["align-left", "align-center", "align-right", "align-justify"];
+
+            var height = 0;
+
+            $scope.click = function (index) {
+
+                if (!height) {
+                    height = $root.find(".target").height();
+                }
+
+                $scope.selected = index;
+                $scope.expanded = !$scope.expanded;
+
+                var margin = 0;
+                if ($scope.expanded) {
+                    margin = (-height * index) / $scope.options.length;
+                }
+                $root.find(".fix").css("margin-top", margin)
+            }
+        }
+
+    </script>
+</body>
+</html>
