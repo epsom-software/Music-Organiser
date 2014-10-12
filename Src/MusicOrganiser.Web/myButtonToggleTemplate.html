@@ -1,6 +1,6 @@
 ﻿
-<div class="btn-toolbar">
-    <div class="btn-group target">
+<div class="spacer" style="position:relative; display:block; float:left;">
+    <div class="btn-group {{isVertical ? 'btn-group-vertical' : ''}}">
         <button ng-repeat="o in options"
                 ng-click="click($index)"
                 ng-if="selected === $index || expanded"
