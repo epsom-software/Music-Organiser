@@ -1,0 +1,12 @@
+﻿
+<div class="btn-toolbar">
+    <div class="btn-group target">
+        <button ng-repeat="o in options"
+                ng-click="click($index)"
+                ng-if="selected === $index || expanded"
+                type="button"
+                class="btn btn-default">
+            <span class="glyphicon glyphicon-{{o}}"></span>
+        </button>
+    </div>
+</div>

@@ -138,6 +138,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="myButtonToggleTemplate.html" />
+    <Content Include="animateFull.html" />
+    <Content Include="animate.html" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="favicon.ico" />
@@ -146,6 +149,8 @@
     <Content Include="AngularViews\songs.html" />
     <Content Include="AngularViews\index.html" />
     <Content Include="Scripts\AlertOnError.js" />
+    <Content Include="Scripts\Vendor\angular-animate.js" />
+    <Content Include="Scripts\Vendor\angular-animate.min.js" />
     <Content Include="Scripts\RequireConfig.js" />
     <Content Include="Scripts\Vendor\angular-amd.js" />
     <Content Include="Scripts\Vendor\angular-load.js" />
@@ -162,6 +167,7 @@
     <Content Include="Scripts\Vendor\angular.min.js.map" />
     <Content Include="Scripts\Vendor\angular-resource.min.js.map" />
     <Content Include="Scripts\Vendor\angular-route.min.js.map" />
+    <Content Include="Scripts\Vendor\angular-animate.min.js.map" />
     <None Include="Scripts\Vendor\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\Vendor\jquery-1.10.2.js" />
     <Content Include="Scripts\Vendor\jquery-1.10.2.min.js" />
